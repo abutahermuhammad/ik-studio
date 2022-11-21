@@ -1,0 +1,40 @@
+:root {
+  --brand-primary: #055547;
+  --brand-secondary: #056857;
+
+  --black: #121923;
+  --white: #fff;
+  --brand-darkest: var(--black);
+  --brand-lightest: var(--white);
+  --brand-darkest--inverted: color(var(--brand-darkest) contrast(80%));
+  --brand-primary--inverted: color(var(--brand-primary) contrast(80%));
+  --brand-secondary--inverted: var(--brand-lightest);
+
+  /* Base */
+  --brand-faded: color(var(--brand-primary) blend(var(--white) 60%));
+  --gray-base: color(var(--black) blend(var(--brand-faded) 50%));
+
+  /* Focus */
+  --focus-color: var(--brand-primary);
+
+  /* Form: Input */
+  --input-bg: #ebebeb; /* #eef0f0 */
+  --input-bg-focus: var(--input-bg);
+  --fieldset-bg: var(--input-bg);
+  --input-border-color: #05554725;
+  --input-border-radius: 4px;
+
+  /* Main navigation */
+  --main-navigation-color: var(--brand-primary);
+  --main-navigation-color--inverted: color(
+    var(--main-navigation-color) contrast(80%)
+  );
+  --main-navigation-color--inverted-muted: color(
+    var(--main-navigation-color)
+      blend(var(--main-navigation-color--inverted) 70%)
+  );
+
+  /* Others */
+  --pane-header-height: 2.5rem; /* 3.4375rem; 55px */
+  --avatar-height: 18px; /* 23px */
+}

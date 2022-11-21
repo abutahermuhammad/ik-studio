@@ -1,0 +1,41 @@
+{
+  "root": true,
+  "api": {
+    "projectId": "7xpoohbh",
+    "dataset": "production"
+  },
+  "project": {
+    "name": "ইসলামের কন্ঠ",
+    "basePath": "/"
+  },
+  "plugins": [
+    "@sanity/base",
+    "@sanity/components",
+    "@sanity/default-layout",
+    "@sanity/default-login",
+    "@sanity/desk-tool"
+  ],
+  "env": {
+    "development": {
+      "plugins": ["@sanity/vision"]
+    }
+  },
+  "parts": [
+    {
+      "name": "part:@sanity/base/schema",
+      "path": "./schemas/schema"
+    },
+    {
+      "name": "part:@sanity/desk-tool/structure",
+      "path": "./deskStructure.js"
+    },
+    {
+      "implements": "part:@sanity/base/theme/variables/override-style",
+      "path": "./assets/css/variables.css"
+    },
+    {
+      "implements": "part:@sanity/base/app-loading-screen",
+      "path": "./components/LoadingScreen"
+    }
+  ]
+}
